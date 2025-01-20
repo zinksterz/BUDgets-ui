@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import{BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Dashboard from './pages/Dashboard';
+import Chat from './pages/Chat';
+import History from './pages/History';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App: React.FC = () =>{
+  return(
+    <Router>
+      <div>
+        {/*Header */}
+        <Header />
+
+        {/*Main Content */}
+        <main style={{padding: '20px'}}>
+          <Routes>
+            <Route path='/' element={<Dashboard />}/>
+            <Route path='/chat' element={<Chat />}/>
+            <Route path='/history' element={<History />}/>
+          </Routes>
+        </main>
+        {/* Footer */}
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
