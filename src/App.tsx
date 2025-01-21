@@ -10,11 +10,8 @@ const App: React.FC = () =>{
   return(
     <Router>
       <div>
-        {/*Header */}
         <Header />
-
-        {/*Main Content */}
-        <main style={{padding: '20px'}}>
+        <main className='main-content'>
           <Routes>
             <Route path='/' element={<Dashboard />}/>
             <Route path='/chat' element={<Chat />}/>

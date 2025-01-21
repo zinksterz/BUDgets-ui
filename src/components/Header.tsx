@@ -3,13 +3,24 @@ import {Link} from 'react-router-dom';
 
 const Header: React.FC = () => {
     return(
-        <header style={{padding: '10px', backgroundColor: '#f0f0f0'}}>
-            <nav>
-                <Link to="/">Dashboard</Link> |
-                <Link to="/chat">Chat</Link> |
-                <Link to="/history">Transaction History</Link>
-            </nav>
-        </header>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">Budget Tracker</Link>
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Dashboard</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/chat">Chat</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/history">Transaction History</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     );
 };
 

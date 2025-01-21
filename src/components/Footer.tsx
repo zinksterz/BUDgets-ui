@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer: React.FC = () =>{
     return(
-        <footer style={{padding: '10px', backgroundColor: '#f8f8f8', textAlign: 'center'}}>
+        <footer className="bg-dark text-center text-white py-3 mt-auto">
             <p>&copy; 2025 Budget Tracker App</p>
         </footer>
     );
